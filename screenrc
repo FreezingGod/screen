@@ -6,11 +6,11 @@ defscrollback 10240
 hardstatus alwayslastline
 hardstatus string '%{= kG}[%{Y}%l%{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
 ##escape ^L^L
-term xterm
+term xterm-256color
 
 deflogin off
 # default shell is zsh
-# defshell /usr/bin/zsh
+defshell /usr/bin/zsh
 # default starting dir is ~
 # shelltitle "$ |bash"
 chdir
