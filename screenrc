@@ -1,0 +1,26 @@
+startup_message off
+vbell off
+defscrollback 10240
+
+#caption always "%{=u kC} %= %-w%L>%{=b G}[:%n %t:]%{-}%52<%+w %L="
+hardstatus alwayslastline
+hardstatus string '%{= kG}[%{Y}%l%{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+##escape ^L^L
+term xterm
+
+deflogin off
+# default shell is zsh
+# defshell /usr/bin/zsh
+# default starting dir is ~
+# shelltitle "$ |bash"
+chdir
+#screen /home/nicholas/bin/lianjiebaidu
+
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+attrcolor b ".I"
+# tell screen how to set colors. AB = background, AF=foreground 
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+# erase background with current bg color 
+defbce "on"
+escape ^Oo
